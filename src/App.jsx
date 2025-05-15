@@ -33,7 +33,7 @@ function App() {
   };
 
   return (
-    <div className='theme1 h-full lg:h-screen bg-backgroundColor pb-10'>
+    <div className='theme2 h-full lg:h-screen bg-backgroundColor pb-10'>
       <Header />
       {(context.successSubmit)? <SuccessBanner/>:null}
       <div className='h-[150dvh] lg:h-[50dvh] mt-10 flex flex-col lg:flex-row justify-center items-center gap-[3vw] w-screen'>

@@ -22,7 +22,7 @@ const CreateModal = () => {
   }
 
   return (
-    <div className=" absolute h-64 w-[22vw] min-w-96 bg-white right-2 lg:right-8 bottom-24 p-4 rounded-lg">
+    <div className=" absolute h-64 w-[22vw] min-w-96 bg-white right-2 lg:right-8 bottom-24 p-4 rounded-lg border-2 border-gray-300 shadow-lg ">
       <div className=" flex flex-col gap-8">
         <div>
           <h2>Enter Name</h2>
@@ -57,7 +57,7 @@ const CreateModal = () => {
           />
         </div>
         <div className=" w-full flex justify-end pr-4">
-          <button className=" h-8 rounded-lg font-semibold font-mono bg-buttonColor text-white px-3" onClick={handleSubmit}>
+          <button className=" h-8 rounded-lg font-semibold font-mono bg-buttonColor text-white px-3 hover:bg-backgroundColor hover:text-black hover:scale-105 active:scale-95 transform transition duration-75" onClick={handleSubmit}>
             Submit
           </button>
         </div>

@@ -10,3 +10,12 @@
   --text-color : 41, 50, 65;
   --text-secondary-color : 61, 90, 128; 
 }
+
+.theme2 {
+  --background-primary-color : 255, 252, 242;
+  --background-secondary-color : 204, 197, 185;
+  --button-primary-color : 235, 94, 40;
+  --border-color : 37, 36, 34;
+  --text-color : 37, 36, 34;
+  --text-secondary-color : 37, 36, 34; 
+}

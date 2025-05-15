@@ -11,7 +11,7 @@ const AvatarCard = ({
 }) => {
   return (
     <div
-      className={`h-[50dvh] w-[30dvh] min-w-80 lg:w-96 bg-secondaryBackgroundColor ${className} border-2 border-black rounded-xl relative`}
+      className={`h-[50dvh] w-[30dvh] min-w-80 lg:w-96 bg-secondaryBackgroundColor ${className} border-2 border-black rounded-xl relative shadow-xl shadow-borderColor/50 hover:scale-105 transform duration-300`}
     >
       <div className=" h-[35%] bg-backgroundColor rounded-t-xl"></div>
       <div className="absolute left-1/2 top-[35%] transform -translate-x-1/2 -translate-y-1/2">
