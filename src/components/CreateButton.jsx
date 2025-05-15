@@ -5,9 +5,13 @@ const CreateButton = () => {
 
     const [showModal, setShowModal] = useState(false)
 
+    function toggleVisibility() {
+      setShowModal(x => !x)
+    }
+
   return (
     <div>
-{(showModal)? <CreateModal/>: null}
+{(showModal)? <CreateModal toggleVisibility ={toggleVisibility}/>: null}
         
     <button 
     onClick={() => {setShowModal(x => !x)}}
