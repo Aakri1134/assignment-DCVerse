@@ -8,11 +8,19 @@ export const useGlobalContext = () => {
 
 const GlobalContextProvider = ({children}) => {
 
-    const [username, setUsername] = useState("Aakrisht Srivastava");
+    const [username, setUsername] = useState("Aakrisht");
     const [loggedIn, setLoggedIn] = useState(false);
+    const [successSubmit, setSuccessSubmit] = useState(false)
+
+    const successfulSubmission = () => {
+        setSuccessSubmit(true)
+        setTimeout(() => {
+            setSuccessSubmit(false)
+        }, 2000)
+    }
 
     return(
-        <GlobalContext.Provider value={{username, loggedIn}}>
+        <GlobalContext.Provider value={{username, loggedIn, successSubmit, successfulSubmission}}>
             {children}
         </GlobalContext.Provider>
     )

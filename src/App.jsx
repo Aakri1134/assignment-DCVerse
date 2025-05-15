@@ -3,10 +3,16 @@ import './App.css';
 import Header from './components/Header';
 import AvatarCard from './components/AvatarCard';
 import axios from 'axios';
+import CreateButton from './components/CreateButton';
+import { useGlobalContext } from './context/GlobalContext';
+import SuccessBanner from './components/SuccessBanner';
 
 function App() {
   const [count, setCount] = useState(0);
   const [data, setData] = useState({ data: [] }); // Initialize data with an object
+
+  const context = useGlobalContext()
+
 
   useEffect(() => {
     cardData();
@@ -29,6 +35,7 @@ function App() {
   return (
     <div className='theme1 h-full lg:h-screen bg-backgroundColor pb-10'>
       <Header />
+      {(context.successSubmit)? <SuccessBanner/>:null}
       <div className='h-[150dvh] lg:h-[50dvh] mt-10 flex flex-col lg:flex-row justify-center items-center gap-[3vw] w-screen'>
         {data.data.length > 0 ? ( // Check if data is available
           <>
@@ -40,6 +47,7 @@ function App() {
           <p className=' absolute top-48 font-mono text-5xl'>Loading...</p> // Show a loading message or spinner
         )}
       </div>
+      <CreateButton/>
     </div>
   );
 }

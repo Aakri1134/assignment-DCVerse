@@ -10,7 +10,7 @@ const Header = ({ className = "" }) => {
   const [typingSpeed, setTypingSpeed] = useState(150)
   
   const phrases = [
-    `Welcome back, ${context.username}`,
+    `Welcome back, ${context.username}!!`,
     "Ready to continue?",
 		 "AI Dashboard"
   ]
@@ -45,7 +45,7 @@ const Header = ({ className = "" }) => {
   };
   return (
     <div className={` flex items-center bg-secondaryBackgroundColor h-full min-h-32 max-h-[15dvh] ${className}`}>
-      <h1 className=" font-mono text-4xl text-textColor font-bold md:pl-16 pl-4 pt-2 pb-2">{displayText}</h1>
+      <h1 className=" font-mono text-4xl text-textColor font-bold md:pl-16 pl-4 pt-2 pb-2">{displayText}<span className="border-r-4 border-textColor ml-1 animate-pulse"/></h1>
     </div>
   )
 }
